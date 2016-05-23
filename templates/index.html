@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
   <title>Hashtag Polling</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $( "#date" ).datepicker();
+    });
+    </script>
 </head>
 <body>
   <h1>Hello World, try a twitter search</h1>
   <form method="get" action="/search/" class="pull-right">
+    <p>Date: <input name='date' type="text" id="date"></p>
     <input type="text" id="searchBox" class="search-query" name="q" placeholder="Search">
     <input type="submit" class="btn" value="Search" >
   </form>
